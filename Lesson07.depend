@@ -1,0 +1,693 @@
+# depslib dependency file v1.0
+1707790705 source:c:\users\matth\desktop\178games\lesson07\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1708565557 c:\users\matth\desktop\178games\lesson07\include\glscene.h
+	"Common.h"
+
+1708999465 c:\users\matth\desktop\178games\lesson07\include\common.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<GL/glut.h>
+	<SOIL.h>
+	<time.h>
+
+1706577405 c:\users\matth\desktop\178games\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1668646408 c:\users\matth\desktop\178games\common\include\soil.h
+
+1709603001 source:c:\users\matth\desktop\178games\lesson07\src\glinputs.cpp
+	"GLInputs.h"
+
+1709602546 c:\users\matth\desktop\178games\lesson07\include\glinputs.h
+	"GLModel.h"
+	"Common.h"
+	"GLParallax.h"
+	"GLPlayer.h"
+
+1707963424 c:\users\matth\desktop\178games\lesson07\include\glmodel.h
+	<common.h>
+
+1708568028 c:\users\matth\desktop\178games\lesson07\include\glparallax.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1707963410 c:\users\matth\desktop\178games\lesson07\include\gltexture.h
+	"Common.h"
+
+1708568209 c:\users\matth\desktop\178games\lesson07\include\gltimer.h
+	"Common.h"
+
+1707183899 source:c:\users\matth\desktop\178games\lesson07\src\gllight.cpp
+	"GLLight.h"
+
+1707183379 c:\users\matth\desktop\178games\lesson07\include\gllight.h
+	<GLScene.h>
+
+1707959078 source:c:\users\matth\desktop\178games\lesson07\src\glmodel.cpp
+	"GLModel.h"
+
+1708998141 source:c:\users\matth\desktop\178games\lesson07\src\glparallax.cpp
+	"GLParallax.h"
+
+1712164303 source:c:\users\matth\desktop\178games\lesson07\src\glplayer.cpp
+	"GLPlayer.h"
+
+1709601296 c:\users\matth\desktop\178games\lesson07\include\glplayer.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1712164617 source:c:\users\matth\desktop\178games\lesson07\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	"GLTexture.h"
+	"GLModel.h"
+	"GLInputs.h"
+	"GLParallax.h"
+	"GLPlayer.h"
+	"GLWizard.h"
+
+1707357097 source:c:\users\matth\desktop\178games\lesson07\src\gltexture.cpp
+	"GLTexture.h"
+
+1708567872 source:c:\users\matth\desktop\178games\lesson07\src\gltimer.cpp
+	"GLTimer.h"
+
+1712165604 source:c:\users\matth\desktop\178games\lesson07\src\glwizard.cpp
+	"GLWizard.h"
+
+1712165391 c:\users\matth\desktop\178games\lesson07\include\glwizard.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1713306536 source:c:\users\matth\desktop\wizard test\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1713748197 c:\users\matth\desktop\wizard test\include\glscene.h
+	"Common.h"
+
+1713677463 c:\users\matth\desktop\wizard test\include\common.h
+	<windows.h>
+	<iostream>
+	<chrono>
+	<gl/gl.h>
+	<GL/glut.h>
+	<SOIL.h>
+	<time.h>
+	<SNDS/irrKlang.h>
+
+1713759856 source:c:\users\matth\desktop\wizard test\src\glinputs.cpp
+	"GLInputs.h"
+
+1713755111 c:\users\matth\desktop\wizard test\include\glinputs.h
+	"GLModel.h"
+	"Common.h"
+	"GLParallax.h"
+	"GLPlayer.h"
+	"GLWizard.h"
+	"GLScene.h"
+	"GLSounds.h"
+
+1707963424 c:\users\matth\desktop\wizard test\include\glmodel.h
+	<common.h>
+
+1713336722 c:\users\matth\desktop\wizard test\include\glparallax.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1707963410 c:\users\matth\desktop\wizard test\include\gltexture.h
+	"Common.h"
+
+1708568209 c:\users\matth\desktop\wizard test\include\gltimer.h
+	"Common.h"
+
+1709601296 c:\users\matth\desktop\wizard test\include\glplayer.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1707183899 source:c:\users\matth\desktop\wizard test\src\gllight.cpp
+	"GLLight.h"
+
+1707183379 c:\users\matth\desktop\wizard test\include\gllight.h
+	<GLScene.h>
+
+1707959078 source:c:\users\matth\desktop\wizard test\src\glmodel.cpp
+	"GLModel.h"
+
+1713336726 source:c:\users\matth\desktop\wizard test\src\glparallax.cpp
+	"GLParallax.h"
+
+1712164303 source:c:\users\matth\desktop\wizard test\src\glplayer.cpp
+	"GLPlayer.h"
+
+1707357097 source:c:\users\matth\desktop\wizard test\src\gltexture.cpp
+	"GLTexture.h"
+
+1708567872 source:c:\users\matth\desktop\wizard test\src\gltimer.cpp
+	"GLTimer.h"
+
+1713759728 source:c:\users\matth\desktop\wizard test\src\glwizard.cpp
+	"GLWizard.h"
+
+1713759673 c:\users\matth\desktop\wizard test\include\glwizard.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1713756133 source:c:\users\matth\desktop\wizard test\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	"GLTexture.h"
+	"GLModel.h"
+	"GLInputs.h"
+	"GLParallax.h"
+	"GLPlayer.h"
+	"GLWizard.h"
+	"GLSkeleton.h"
+	"GLSounds.h"
+
+1713224192 c:\users\matth\desktop\wizard test\include\glskeleton.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1713679394 source:c:\users\matth\desktop\wizard test\src\glskeleton.cpp
+	"GLSkeleton.h"
+
+1517335446 c:\users\matth\desktop\178games\common\include\snds\irrklang.h
+	"ik_irrKlangTypes.h"
+	"ik_vec3d.h"
+	"ik_IRefCounted.h"
+	"ik_IVirtualRefCounted.h"
+	"ik_ESoundOutputDrivers.h"
+	"ik_ESoundEngineOptions.h"
+	"ik_EStreamModes.h"
+	"ik_SAudioStreamFormat.h"
+	"ik_ISoundEngine.h"
+	"ik_ISoundSource.h"
+	"ik_ISound.h"
+	"ik_IAudioStream.h"
+	"ik_IAudioStreamLoader.h"
+	"ik_ISoundEffectControl.h"
+	"ik_ISoundStopEventReceiver.h"
+	"ik_IFileFactory.h"
+	"ik_IFileReader.h"
+	"ik_ISoundDeviceList.h"
+	"ik_IAudioRecorder.h"
+	"ik_ISoundMixedOutputReceiver.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_irrklangtypes.h
+	<wchar.h>
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_vec3d.h
+	<math.h>
+	"ik_irrKlangTypes.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_irefcounted.h
+	"ik_irrKlangTypes.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_ivirtualrefcounted.h
+	"ik_irrKlangTypes.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_esoundoutputdrivers.h
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_esoundengineoptions.h
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_estreammodes.h
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_saudiostreamformat.h
+	"ik_IRefCounted.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_isoundengine.h
+	"ik_IRefCounted.h"
+	"ik_vec3d.h"
+	"ik_ISoundSource.h"
+	"ik_ISound.h"
+	"ik_EStreamModes.h"
+	"ik_IFileFactory.h"
+	"ik_ISoundMixedOutputReceiver.h"
+
+1517256032 c:\users\matth\desktop\178games\common\include\snds\ik_isoundsource.h
+	"ik_IVirtualRefCounted.h"
+	"ik_vec3d.h"
+	"ik_EStreamModes.h"
+	"ik_SAudioStreamFormat.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_isound.h
+	"ik_IVirtualRefCounted.h"
+	"ik_ISoundEffectControl.h"
+	"ik_vec3d.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_isoundeffectcontrol.h
+	"ik_IVirtualRefCounted.h"
+	"ik_vec3d.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_ifilefactory.h
+	"ik_IRefCounted.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_isoundmixedoutputreceiver.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_iaudiostream.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_iaudiostreamloader.h
+	"ik_IRefCounted.h"
+	"ik_IFileReader.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_ifilereader.h
+	"ik_IRefCounted.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_isoundstopeventreceiver.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1517256008 c:\users\matth\desktop\178games\common\include\snds\ik_isounddevicelist.h
+	"ik_IRefCounted.h"
+
+1517256024 c:\users\matth\desktop\178games\common\include\snds\ik_iaudiorecorder.h
+	"ik_IRefCounted.h"
+	"ik_ISoundSource.h"
+
+1713755936 source:c:\users\matth\desktop\wizard test\src\glsounds.cpp
+	"GLSounds.h"
+
+1713755897 c:\users\matth\desktop\wizard test\include\glsounds.h
+	<Common.h>
+
+1715212600 source:c:\users\matth\desktop\github\csci178\wizard test\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1715728049 c:\users\matth\desktop\github\csci178\wizard test\include\glscene.h
+	"Common.h"
+	"bClock.h"
+
+1715195760 c:\users\matth\desktop\github\csci178\wizard test\include\common.h
+	<windows.h>
+	<iostream>
+	<chrono>
+	<gl/gl.h>
+	<thread>
+	<GL/glut.h>
+	<SOIL.h>
+	<time.h>
+	<SNDS/irrKlang.h>
+
+1715723010 source:c:\users\matth\desktop\github\csci178\wizard test\src\glinputs.cpp
+	"GLInputs.h"
+
+1715224654 c:\users\matth\desktop\github\csci178\wizard test\include\glinputs.h
+	"GLModel.h"
+	"Common.h"
+	"GLParallax.h"
+	"GLWizard.h"
+	"GLScene.h"
+	"GLSounds.h"
+	"GLWarrior.h"
+	"GLRogue.h"
+
+1707963424 c:\users\matth\desktop\github\csci178\wizard test\include\glmodel.h
+	<common.h>
+
+1713916262 c:\users\matth\desktop\github\csci178\wizard test\include\glparallax.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1707963410 c:\users\matth\desktop\github\csci178\wizard test\include\gltexture.h
+	"Common.h"
+
+1708568209 c:\users\matth\desktop\github\csci178\wizard test\include\gltimer.h
+	"Common.h"
+
+1709601296 c:\users\matth\desktop\github\csci178\wizard test\include\glplayer.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1715724349 c:\users\matth\desktop\github\csci178\wizard test\include\glwizard.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+	"hitBox.h"
+	"GLInventory.h"
+	"projectile.h"
+
+1713755897 c:\users\matth\desktop\github\csci178\wizard test\include\glsounds.h
+	<Common.h>
+
+1707183899 source:c:\users\matth\desktop\github\csci178\wizard test\src\gllight.cpp
+	"GLLight.h"
+
+1707183379 c:\users\matth\desktop\github\csci178\wizard test\include\gllight.h
+	<GLScene.h>
+
+1707959078 source:c:\users\matth\desktop\github\csci178\wizard test\src\glmodel.cpp
+	"GLModel.h"
+
+1714005307 source:c:\users\matth\desktop\github\csci178\wizard test\src\glparallax.cpp
+	"GLParallax.h"
+
+1712164303 source:c:\users\matth\desktop\github\csci178\wizard test\src\glplayer.cpp
+	"GLPlayer.h"
+
+1715730439 source:c:\users\matth\desktop\github\csci178\wizard test\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	"GLTexture.h"
+	"GLModel.h"
+	"GLInputs.h"
+	"GLParallax.h"
+	"GLPlayer.h"
+	"GLWizard.h"
+	"GLSkeleton.h"
+	"GLSounds.h"
+	"GLWarrior.h"
+	"bClock.h"
+	"slime.h"
+	"collisionCheck.h"
+	"GLRogue.h"
+	"rangedEn.h"
+
+1715225101 c:\users\matth\desktop\github\csci178\wizard test\include\glskeleton.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+	"hitBox.h"
+
+1715190164 source:c:\users\matth\desktop\github\csci178\wizard test\src\glskeleton.cpp
+	"GLSkeleton.h"
+	<cmath>
+
+1713755936 source:c:\users\matth\desktop\github\csci178\wizard test\src\glsounds.cpp
+	"GLSounds.h"
+
+1715207080 source:c:\users\matth\desktop\github\csci178\wizard test\src\gltexture.cpp
+	"GLTexture.h"
+
+1708567872 source:c:\users\matth\desktop\github\csci178\wizard test\src\gltimer.cpp
+	"GLTimer.h"
+
+1715730734 source:c:\users\matth\desktop\github\csci178\wizard test\src\glwizard.cpp
+	"GLWizard.h"
+
+1715273504 source:c:\users\matth\desktop\github\csci178\wizard test\src\glwarrior.cpp
+	"GLWarrior.h"
+
+1715273414 c:\users\matth\desktop\github\csci178\wizard test\include\glwarrior.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+	"hitBox.h"
+	"GLInventory.h"
+
+1713829914 c:\users\matth\desktop\github\csci178\wizard test\include\bclock.h
+
+1713829912 source:c:\users\matth\desktop\github\csci178\wizard test\src\bclock.cpp
+	"bClock.h"
+	"GLTimer.h"
+
+1715104919 source:c:\users\matth\desktop\github\csci178\wizard test\src\collisioncheck.cpp
+	"collisionCheck.h"
+	<math.h>
+
+1715104919 c:\users\matth\desktop\github\csci178\wizard test\include\collisioncheck.h
+	<common.h>
+	<GLTimer.h>
+	<vector>
+	"hitBox.h"
+
+1715104919 c:\users\matth\desktop\github\csci178\wizard test\include\hitbox.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1715104919 source:c:\users\matth\desktop\github\csci178\wizard test\src\hitbox.cpp
+	"hitBox.h"
+	"common.h"
+	<cmath>
+
+1715725251 source:c:\users\matth\desktop\github\csci178\wizard test\src\slime.cpp
+	"slime.h"
+	<time.h>
+	<cmath>
+	"hitBox.h"
+	<cstdlib>
+	<random>
+
+1715221966 c:\users\matth\desktop\github\csci178\wizard test\include\slime.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<collisionCheck.h>
+	"hitBox.h"
+	"GLSounds.h"
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<collisionCheck.h>
+
+1713306536 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1715036148 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glscene.h
+	"Common.h"
+	"bClock.h"
+
+1713891342 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\common.h
+	<windows.h>
+	<iostream>
+	<chrono>
+	<gl/gl.h>
+	<GL/glut.h>
+	<SOIL.h>
+	<time.h>
+	<SNDS/irrKlang.h>
+
+1713829914 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\bclock.h
+
+1713829912 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\bclock.cpp
+	"bClock.h"
+	"GLTimer.h"
+
+1708568209 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\gltimer.h
+	"Common.h"
+
+1713822688 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\collisioncheck.cpp
+	"collisionCheck.h"
+	<math.h>
+
+1713807664 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\collisioncheck.h
+	<common.h>
+	<GLTimer.h>
+	"hitBox.h"
+
+1713820778 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\hitbox.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1707963410 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\gltexture.h
+	"Common.h"
+
+1715061045 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glinputs.cpp
+	"GLInputs.h"
+
+1715060027 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glinputs.h
+	"GLModel.h"
+	"Common.h"
+	"GLParallax.h"
+	"GLWizard.h"
+	"GLScene.h"
+	"GLSounds.h"
+	"GLWarrior.h"
+	"GLRogue.h"
+
+1707963424 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glmodel.h
+	<common.h>
+
+1713916262 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glparallax.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1715060949 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glwizard.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+	"hitBox.h"
+
+1713755897 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glsounds.h
+	<Common.h>
+
+1713995159 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glwarrior.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+	"hitBox.h"
+
+1707183899 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\gllight.cpp
+	"GLLight.h"
+
+1707183379 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\gllight.h
+	<GLScene.h>
+
+1707959078 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glmodel.cpp
+	"GLModel.h"
+
+1714005307 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glparallax.cpp
+	"GLParallax.h"
+
+1715061207 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	"GLTexture.h"
+	"GLModel.h"
+	"GLInputs.h"
+	"GLParallax.h"
+	"GLPlayer.h"
+	"GLWizard.h"
+	"GLSkeleton.h"
+	"GLSounds.h"
+	"GLWarrior.h"
+	"bClock.h"
+	"slime.h"
+	"collisionCheck.h"
+	"GLRogue.h"
+
+1709601296 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glplayer.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1713224192 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glskeleton.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+
+1713997777 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\slime.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<collisionCheck.h>
+	"hitBox.h"
+	"GLSounds.h"
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<collisionCheck.h>
+
+1713679394 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glskeleton.cpp
+	"GLSkeleton.h"
+
+1713755936 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glsounds.cpp
+	"GLSounds.h"
+
+1707357097 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\gltexture.cpp
+	"GLTexture.h"
+
+1708567872 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\gltimer.cpp
+	"GLTimer.h"
+
+1713995439 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glwarrior.cpp
+	"GLWarrior.h"
+
+1715060941 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glwizard.cpp
+	"GLWizard.h"
+
+1713892107 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\hitbox.cpp
+	"hitBox.h"
+	"common.h"
+	<cmath>
+
+1713997783 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\slime.cpp
+	"slime.h"
+	<time.h>
+	<cmath>
+	"hitBox.h"
+
+1715055238 c:\users\matth\desktop\wizard test - backup (5-6-24)\include\glrogue.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+	"hitBox.h"
+
+1715061250 source:c:\users\matth\desktop\wizard test - backup (5-6-24)\src\glrogue.cpp
+	"GLRogue.h"
+
+1715228464 c:\users\matth\desktop\github\csci178\wizard test\include\glrogue.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+	"hitBox.h"
+	"GLInventory.h"
+
+1715273024 source:c:\users\matth\desktop\github\csci178\wizard test\src\glrogue.cpp
+	"GLRogue.h"
+
+1715210204 source:c:\users\matth\desktop\github\csci178\wizard test\src\projectile.cpp
+	"projectile.h"
+	"GLTexture.h"
+
+1715210068 c:\users\matth\desktop\github\csci178\wizard test\include\projectile.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<collisionCheck.h>
+	<hitBox.h>
+
+1715228955 source:c:\users\matth\desktop\github\csci178\wizard test\src\rangeden.cpp
+	"rangedEn.h"
+	<time.h>
+	<cmath>
+
+1715225838 c:\users\matth\desktop\github\csci178\wizard test\include\rangeden.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+	<projectile.h>
+	<hitBox.h>
+
+1715228230 source:c:\users\matth\desktop\github\csci178\wizard test\src\glinventory.cpp
+	"GLInventory.h"
+
+1715202744 c:\users\matth\desktop\github\csci178\wizard test\include\glinventory.h
+	"Common.h"
+	"GLTexture.h"
+	"GLTimer.h"
+

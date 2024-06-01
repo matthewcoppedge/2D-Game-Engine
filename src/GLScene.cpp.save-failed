@@ -1,0 +1,463 @@
+#include "GLScene.h"
+#include "GLLight.h"
+#include "GLTexture.h"
+#include "GLModel.h"
+#include "GLInputs.h"
+#include "GLParallax.h"
+#include "GLPlayer.h"
+#include "GLWizard.h"
+#include "GLSkeleton.h"
+#include "GLSounds.h"
+
+GLTexture*  teapotTex   = new GLTexture();       //Texture object
+GLModel*    teaPotModel = new GLModel();         //Model   object
+GLInputs*   KbMs        = new GLInputs();        //Keyboard and Mouse
+GLParallax* plx         = new GLParallax();      //Parallax close  background
+GLParallax* plx1        = new GLParallax();      //Parallax far    background
+GLPlayer*   pl          = new GLPlayer();        //Player
+GLWizard*   wiz         = new GLWizard();        //Player
+GLSkeleton* skel        = new GLSkeleton();
+GLParallax* title       = new GLParallax();
+GLParallax* title_2     = new GLParallax();
+GLParallax* dungeon_0   = new GLParallax();
+GLParallax* dungeon_1   = new GLParallax();      //Top layer
+GLParallax* dungeon_2   = new GLParallax();      //Middle Layer
+GLParallax* dungeon_3   = new GLParallax();      //Bottom Layer
+GLParallax* dungeon_4   = new GLParallax();      //Light
+
+GLParallax* main_1   = new GLParallax();
+GLParallax* main_2   = new GLParallax();      //Top layer
+GLParallax* main_3   = new GLParallax();      //Middle Layer
+GLParallax* main_4   = new GLParallax();      //Bottom Layer
+GLParallax* main_5   = new GLParallax();      //Light
+
+GLParallax* text_1   = new GLParallax();      //Arcane
+GLParallax* text_2   = new GLParallax();      //New Game
+GLParallax* text_3   = new GLParallax();      //Settings
+GLParallax* text_4   = new GLParallax();      //Help
+GLParallax* text_5   = new GLParallax();      //Exit
+GLParallax* text_6   = new GLParallax();      //Choose Your Class
+
+GLParallax* settingsIcon = new GLParallax();  //Construction Guy
+GLParallax* backArrow    = new GLParallax();  //Back Arrow
+
+GLParallax* wizardIcon  = new GLParallax();
+GLParallax* warriorIcon = new GLParallax();
+GLParallax* rogueIcon   = new GLParallax();
+
+GLParallax* wizardName  = new GLParallax();
+GLParallax* warriorName = new GLParallax();
+GLParallax* rogueName   = new GLParallax();
+
+GLSounds* main_theme = new GLSounds();
+GLSounds* menu_click = new GLSounds();
+GLSounds* settings_construction = new GLSounds();
+GLSounds* dark_souls = new GLSounds();
+
+GLParallax* text[6];           //Used to send all text to input class to handle color changes
+
+GLParallax* icons[3];          //Used to send all icons to input class to handle color changes
+
+
+
+
+
+GLint GLScene::initGL()
+{
+    glShadeModel(GL_SMOOTH);                  //for smooth render
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);     //clear background to black
+    glClearDepth(1.0f);                       //depth test for layers
+    glEnable(GL_DEPTH_TEST);                  //activate depth test
+    glDepthFunc(GL_LEQUAL);                   //depth function
+
+    GLLight Light(GL_LIGHT0);
+    Light.setLight(GL_LIGHT0);
+
+    glEnable(GL_BLEND);                                    //Transparent effect on png
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_TEXTURE_2D);
+    teapotTex->loadTexture("images/teapot.jpg");
+    plx->parallaxInit("images/background.png");
+    plx1->parallaxInit("images/sky.png");
+    dungeon_0->parallaxInit("images/dun/Sky.png");
+    dungeon_1->parallaxInit("images/dun/TopLayer.png");
+    dungeon_2->parallaxInit("images/dun/MiddleLayer.png");
+    dungeon_3->parallaxInit("images/dun/DownLayer.png");
+    dungeon_4->parallaxInit("images/dun/Light.png");
+    title->parallaxInit("images/title.png");
+    title_2->parallaxInit("images/title_2.png");
+    wiz->initWizard(6, 1);
+    wiz->actiontrigger = wiz->IDLE;
+    wiz->lastAction = wiz->IDLE;
+    skel->initSkeleton(4,1);
+    skel->actiontrigger = skel->IDLE;
+    skel->lastAction = skel->IDLE;
+
+    main_1->parallaxInit("images/main_menu/1.png");
+    main_2->parallaxInit("images/main_menu/2.png");
+    main_3->parallaxInit("images/main_menu/3.png");
+    main_4->parallaxInit("images/main_menu/4.png");
+    main_5->parallaxInit("images/main_menu/5.png");
+
+    text_1->parallaxInit("images/main_menu/arcane.png");
+    text_2->parallaxInit("images/main_menu/new_game.png");
+    text_3->parallaxInit("images/main_menu/settings.png");
+    text_4->parallaxInit("images/main_menu/help.png");
+    text_5->parallaxInit("images/main_menu/exit.png");
+    text_6->parallaxInit("images/main_menu/choose_class.png");
+
+    wizardName->parallaxInit("images/main_menu/wizardName.png");
+    warriorName->parallaxInit("images/main_menu/warriorName.png");
+    rogueName->parallaxInit("images/main_menu/rogueName.png");
+
+
+
+    wizardIcon->parallaxInit("images/main_menu/wizardIcon.jpg");
+    //warriorIcon->parallaxInit("images/main_menu/rogueIcon.png");
+    warriorIcon->parallaxInit("images/main_menu/questionMark.jpg");
+    //rogueIcon->parallaxInit("images/main_menu/warriorIcon.png");
+    rogueIcon->parallaxInit("images/main_menu/questionMark.jpg");
+    backArrow->parallaxInit("images/main_menu/backArrow.png");
+
+    settingsIcon->parallaxInit("images/main_menu/settingsIcon.jpg");
+
+    main_theme->initSounds();
+    menu_click->initSounds();
+    dark_souls->initSounds();
+
+    text[0] = text_1;           //Arcane
+    text[1] = text_2;           //New Game
+    text[2] = text_3;           //Settings
+    text[3] = text_4;           //Help
+    text[4] = text_5;           //Exit
+    text[5] = backArrow;        //Back Arrow
+
+    icons[0] = wizardIcon;
+    icons[1] = rogueIcon;
+    icons[2] = warriorIcon;
+
+    firstTime[0] = true;
+    firstTime[0] = true;
+    firstTime[0] = true;
+
+    return true;
+}
+
+GLint GLScene::drawScene()                                           //This function runs on a loop, do not abuse it!!!
+{
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);              //Each time you draw something, have to clear bits each iteration
+    glLoadIdentity();
+    //glTranslatef(0.0f, 0.0f, -8.0f);                               //Translate object to x, y , z
+    glColor3f(1.0, 1.0, 1.0);                                        //Color the object green
+
+    (level == 1 || level == 2) ? main_menu = false : main_menu = true;
+
+    (level == 4) ? (settings_menu = true, main_menu = false) : settings_menu = false;
+
+    (settings_menu) ? settings_construction->playSound("sounds/construction.wav") : settings_construction->pauseSound("blank");
+
+    (main_menu) ? main_theme->playSound("sounds/main_theme.wav") : main_theme->pauseSound("sounds/main_theme.wav");
+
+
+    switch(level) {
+        case 0:
+            main_1->a = 1.0f;
+            main_2->a = 1.0f;
+            main_3->a = 1.0f;
+            main_4->a = 1.0f;
+            main_5->a = 1.0f;
+            text_6->a = 1.0f;
+            wizardIcon->a = 1.0f;
+            rogueIcon->a = 1.0f;
+            warriorIcon->a = 1.0f;
+            warriorName->a = 1.0f;
+            wizardName->a = 1.0f;
+            rogueName->a = 1.0f;
+            backArrow->a = 1.0f;
+            glPushMatrix();
+                glScalef(3.33, 3.33, 1.0f);
+                glDisable(GL_LIGHTING);
+                main_1->parallaxDraw(screenWidth, screenHeight);
+                main_2->parallaxDraw(screenWidth, screenHeight);
+                main_3->parallaxDraw(screenWidth, screenHeight);
+                main_4->parallaxDraw(screenWidth, screenHeight);
+                main_5->parallaxDraw(screenWidth, screenHeight);
+                main_2->parallaxScroll(true, "right", 0.00001f);
+                main_3->parallaxScroll(true, "right", 0.00025);
+                main_5->parallaxScroll(true, "right", 0.001f);
+            glPopMatrix();
+
+            glPushMatrix();
+                glTranslatef(0.0, 1.0, 0.0);
+                glScalef(1.75f, 0.75f, 1.0f);
+                text_1->parallaxDraw(screenWidth, screenHeight);
+            glPopMatrix();
+            glPushMatrix();
+                glTranslatef(0.0, 0.00, 0.0);
+                glScalef(0.315f, 0.315f, 1.0f);
+                text_2->parallaxDraw(screenWidth, screenHeight);
+            glPopMatrix();
+            glPushMatrix();
+                glTranslatef(0.0, -0.65, 0.0);
+                glScalef(0.30f, 0.315f, 1.0f);
+                text_3->parallaxDraw(screenWidth, screenHeight);
+            glPopMatrix();
+            glPushMatrix();
+                glTranslatef(0.0, -1.45, 0.0);
+                glScalef(0.25f, 0.25f, 1.0f);
+                text_4->parallaxDraw(screenWidth, screenHeight);
+            glPopMatrix();
+            glPushMatrix();
+                glTranslatef(0.0, -2.25, 0.0);
+                glScalef(0.25f, 0.25f, 1.0f);
+                text_5->parallaxDraw(screenWidth, screenHeight);
+            glPopMatrix();
+            glEnable(GL_LIGHTING);
+            break;
+        case 1:
+            glPushMatrix();                                                  //Group object
+                glScalef(3.33, 3.33, 1.0);
+                glDisable(GL_LIGHTING);
+                plx1->parallaxDraw(screenWidth, screenHeight);
+                plx->parallaxDraw(screenWidth, screenHeight);                //Draw Model Object
+                plx1->parallaxScroll(true, "right", 0.0001f);                 //Parallax Auto Mode
+                glEnable(GL_LIGHTING);
+            glPopMatrix();
+            break;
+
+        case 2:
+            glPushMatrix();                                                  //Group object
+                glScalef(3.33, 3.33, 1.0);
+                glDisable(GL_LIGHTING);
+                dungeon_0->parallaxDraw(screenWidth, screenHeight);
+                dungeon_3->parallaxDraw(screenWidth, screenHeight);
+                dungeon_2->parallaxDraw(screenWidth, screenHeight);
+                dungeon_4->parallaxDraw(screenWidth, screenHeight);
+                dungeon_1->parallaxDraw(screenWidth, screenHeight);
+                glEnable(GL_LIGHTING);
+            glPopMatrix();
+            break;
+        case 3:         //New Game
+            glPushMatrix();
+                if (next_level == 1) {
+                    static float fade   = 1.0f;
+                    static float adj_3;
+                    if (fullscreen)
+                        adj_3  = 0.0075f;
+                    else
+                        adj_3 = 0.0015f;
+
+                    fade -= adj_3;
+                    if (fade < 0.0f)
+                        level = 1;
+
+                    main_1->a = fade;
+                    main_2->a = fade;
+                    main_3->a = fade;
+                    main_4->a = fade;
+                    main_5->a = fade;
+                    text_6->a = fade;
+                    wizardIcon->a = fade;
+                    rogueIcon->a = fade;
+                    warriorIcon->a = fade;
+                    warriorName->a = fade;
+                    wizardName->a = fade;
+                    rogueName->a = fade;
+                    backArrow->a = fade;
+                }
+                glPushMatrix();
+                    glScalef(3.33, 3.33, 1.0f);
+                    glDisable(GL_LIGHTING);
+                    main_1->parallaxDraw(screenWidth, screenHeight);
+                    main_2->parallaxDraw(screenWidth, screenHeight);
+                    main_3->parallaxDraw(screenWidth, screenHeight);
+                    main_4->parallaxDraw(screenWidth, screenHeight);
+                    main_5->parallaxDraw(screenWidth, screenHeight);
+                    main_2->parallaxScroll(true, "right", 0.00001f);
+                    main_3->parallaxScroll(true, "right", 0.00025);
+                    main_5->parallaxScroll(true, "right", 0.001f);
+                glPopMatrix();
+                glPushMatrix();
+                    glScalef(1.25f, 0.5f, 1.0f);
+                    glTranslatef(0.0f, 4.15f, 1.0f);
+                    text_6->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+                glPushMatrix();
+                    glTranslatef(-3.0f, -0.5f, 1.0f);
+                    glScalef(0.60f, 1.85f, 1.0f);
+                    wizardIcon->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+                glPushMatrix();
+                    glTranslatef(3.0f, -0.5f, 1.0f);
+                    glScalef(0.60f, 1.85f, 1.0f);
+                    warriorIcon->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+                glPushMatrix();
+                    glTranslatef(0.0f, -0.5f, 1.0f);
+                    glScalef(0.60f, 1.85f, 1.0f);
+                    rogueIcon->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+                glPushMatrix();
+                    glScalef(0.25, 0.25, 1.0f);
+                    glTranslatef(-17.50f, 9.0f, 1.0f);
+                    backArrow->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+                glPushMatrix();
+                    glScalef(0.40, 0.15, 1.0f);
+                    glTranslatef(-7.35f, -16.85f, 1.0f);
+                    wizardName->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+                glPushMatrix();
+                    glScalef(0.40, 0.15, 1.0f);
+                    glTranslatef(-0.05f, -16.85f, 1.0f);
+                    warriorName->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+                glPushMatrix();
+                    glScalef(0.40, 0.15, 1.0f);
+                    glTranslatef(7.85f, -16.85f, 1.0f);
+                    rogueName->parallaxDraw(screenWidth, screenHeight);
+                glPopMatrix();
+            glPopMatrix();
+            break;
+        case 4:         //Settings
+            glPushMatrix();
+                glClearColor(1.0, 1.0, 1.0, 1.0);
+                glScalef(2.5, 2.5, 2.5);
+                settingsIcon->parallaxDraw(screenWidth, screenHeight);
+            glPopMatrix();
+            glPushMatrix();
+                glScalef(0.25, 0.25, 1.0f);
+                glTranslatef(-17.50f, 9.0f, 1.0f);
+                backArrow->parallaxDraw(screenWidth, screenHeight);
+            glPopMatrix();
+            break;
+    }
+
+    if (level == 1) {
+        glPushMatrix();
+            glTranslatef(0.0, 1.0, 0.0);
+            wiz->wizPosition.y = -0.55f;
+            glScalef(1.75f, 0.75f, 1.0f);
+        if (firstTime[0]) {
+            dark_souls->playSound("sounds/dark_souls.wav");
+            static float fade  = 0.0f;
+            static float adj_2 = 0.0075f;
+            title->parallaxDraw(screenWidth, screenHeight);
+            title->a = fade;
+            fade += adj_2;
+            if (fade >= 1.2f) {
+                adj_2 *= -1.0f;
+            }
+            if (fade < 0.0f)
+                firstTime[0] = false;
+            cout << "Fade value is: " << fade << "\n";
+        }
+        glPopMatrix();
+    }
+    else if (level == 2) {
+        glPushMatrix();
+            glTranslatef(0.0, 1.0, 0.0);
+            wiz->wizPosition.y = -0.5f;
+            glScalef(1.75f, 0.75f, 1.0f);
+        if (firstTime[1]) {
+            dark_souls->playSound("sounds/dark_souls.wav");
+            static float fade = 0.0f;
+            static float adj  = 0.0075f;
+            title_2->parallaxDraw(screenWidth, screenHeight);
+            title_2->a = fade;
+            fade += adj;
+            if (fade >= 1.2f) {
+                adj *= -1.0f;
+            }
+            if (fade < 0.0f)
+                firstTime[1] = false;
+            cout << "Fade value is: " << fade << "\n";
+        }
+        glPopMatrix();
+    }
+
+    if (level == 1 || level == 2) {
+        glPushMatrix();
+            glDisable(GL_LIGHTING);
+            wiz->actions();
+            //wiz->drawWizard();
+        glPopMatrix();
+    }
+/*
+    glPushMatrix();
+        glDisable(GL_LIGHTING);
+        skel->actions();
+        skel->drawSkeleton();
+    glPopMatrix();
+*/
+    glEnable(GL_LIGHTING);
+
+    return true;
+}
+
+GLvoid GLScene::resizeScene(GLsizei width, GLsizei height)
+{
+    GLfloat aspectRatio = (GLfloat)width/(GLfloat)height;            //keep track of the ratio
+    glViewport(0, 0, width, height);                                 //adjusting the viewport
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(45, aspectRatio, 0.1, 100);
+    glMatrixMode(GL_MODELVIEW);
+}
+
+GLScene::GLScene()
+{
+    screenWidth  = GetSystemMetrics(SM_CXSCREEN);
+    screenHeight = GetSystemMetrics(SM_CYSCREEN);
+}
+
+GLScene::~GLScene()
+{
+    //dtor
+}
+
+int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    //WINDOWPLACEMENT placement = { sizeof(WINDOWPLACEMENT) };
+    //GetWindowPlacement(hWnd, & placement);
+    //placement.showCmd = SW_SHOWMAXIMIZED;
+    //fullscreen = placement.showCmd;
+
+
+
+    switch(uMsg)           //check for inputs
+    {
+    case WM_KEYDOWN:
+        KbMs->wParam = wParam;
+        KbMs->keyPress(wiz, this->level);
+        KbMs->keyBackground(plx, 0.005f);
+        KbMs->keyBackground(plx1, 0.0005f);
+        KbMs->keyBackground(dungeon_2, 0.005f);
+        KbMs->keyBackground(dungeon_3, 0.0005f);
+        break;
+    case WM_KEYUP:
+        KbMs->wParam = wParam;
+        KbMs->keyUp(wiz);
+        break;
+    case WM_LBUTTONDOWN:
+        KbMs->wParam = wParam;
+        KbMs->mouseEventDown(this->level, this->prev_level, this->next_level, menu_click, fullscreen, LOWORD(lParam), HIWORD(lParam), screenWidth, screenHeight);
+        break;
+    case WM_RBUTTONDOWN:
+        KbMs->wParam = wParam;
+        KbMs->mouseEventDown(this->level, this->prev_level, this->next_level, menu_click, fullscreen, LOWORD(lParam), HIWORD(lParam), screenWidth, screenHeight);
+        break;
+    case WM_LBUTTONUP:
+    case WM_RBUTTONUP:
+    case WM_MBUTTONUP:
+        KbMs->mouseEventUp();
+        break;
+    case WM_MOUSEMOVE:
+        KbMs->wParam = wParam;
+        KbMs->mouseMove(teaPotModel, text, icons, this->level, fullscreen, LOWORD(lParam), HIWORD(lParam));
+        break;
+    case WM_MOUSEWHEEL:
+        KbMs->mouseWheel(teaPotModel, (double)GET_WHEEL_DELTA_WPARAM(wParam));
+        break;
+    }
+}
